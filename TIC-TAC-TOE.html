@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic-Tac-Toe 3.0</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0; /* Reset default margin for the body element */
+            display: flex;
+            justify-content: center; /* Horizontally center the content */
+            align-items: center; /* Vertically center the content */
+            height: 100vh; /* Set the body's height to the viewport height for vertical centering */
+        }
+
+        #c, #hud {
+            border: 2px solid white;
+        }
+
+        .restart-button {
+            position: absolute;
+            /* justify-content: left;
+            align-items: first baseline; */
+            bottom: 100px;
+            left: 35%;
+            z-index: 2;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            font-family: "Century Gothic";
+        }
+
+        .restart-button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .btn {
+            position: absolute;
+            bottom: 100px;
+            right: 35%;
+            background-color: black; /* Blue background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 12px 16px; /* Some padding */
+            border: 2px solid white;
+            border-radius: 3px;
+            font-size: 16px; /* Set a font size */
+            font-family: "Century Gothic";
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer; /* Mouse pointer on hover */
+        }
+
+        /* Darker background on mouse-over */
+        .btn:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .title {
+            position: absolute;
+            font-family: "Century Gothic";
+            font-size: 50px;
+            color: white;
+            top: 10px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/44e401cb85.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="TIC-TAC-TOE.js"></script>
+    <script type="text/javascript" src="common/initShaders.js"></script>
+    <script type="text/javascript" src="common/MV.js"></script>
+    <script type="text/javascript" src="common/webgl-utils.js"></script>
+    <script id="vertex-shader" type="x-shader/x-vertex">
+        attribute vec4 a_Position;
+        attribute vec4 a_Color;
+        varying vec4 color;
+        void main() {
+            gl_Position = a_Position;
+            gl_PointSize = 10.0;
+            color = a_Color;
+        }
+    </script>
+    <script id="fragment-shader" type="x-shader/x-fragment">
+        precision mediump float;
+        varying vec4 color;
+        void main() {
+            gl_FragColor = color;
+        }
+    </script>
+</head>    
+<body>
+    <div class="title">Tic-Tac-Toe</div>
+    <br>
+    <canvas id="c" width="512" height="512" style = "position: absolute; z-index: 0">Please use a browser that supports HTML5 </canvas>
+    <canvas id="hud" width="512" height="512" style = "position: absolute; z-index: 1"></canvas>
+    <button id="startAgainButton" class="restart-button"> Restart game</button>
+    <button id="iconButton" class="btn">
+        <i class="fas fa-user-group" id="icon1" style="display: inline;"></i>
+        <i class="fas fa-robot" id="icon2" style="display: none;"></i>
+    </button>  
+</body>
+</html>
