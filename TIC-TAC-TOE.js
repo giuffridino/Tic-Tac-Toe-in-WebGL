@@ -11,7 +11,7 @@ window.onload = function init()
     hud.clearRect(0, 0, 512, 512);
     function displayTitle(hud)
     {
-        hud.font = '25px "Century Gothic"'; 
+        hud.font = '25px "CenturyGothic"'; 
         hud.fillStyle = 'white';
         hud.fillText('Tic-Tac-Toe', 355, 45);
     }
@@ -48,7 +48,7 @@ window.onload = function init()
 
     function drawShape(x, y, in_player)
     {
-        hud.font = '70px "Century Gothic"'; 
+        hud.font = '70px "CenturyGothic"'; 
         hud.fillStyle = 'white';
         if (in_player == "X") 
         {
@@ -63,7 +63,7 @@ window.onload = function init()
 
     function displayWin(in_player)
     {
-        hud.font = '45px "Century Gothic"'; 
+        hud.font = '45px "CenturyGothic"'; 
         hud.fillStyle = 'white';
         if (two_player_mode)
         {
@@ -87,14 +87,14 @@ window.onload = function init()
 
     function displayDraw()
     {
-        hud.font = '65px "Century Gothic"'; 
+        hud.font = '65px "CenturyGothic"'; 
         hud.fillStyle = 'white';
         hud.fillText("Nobody wins", 50, 460);
     }
 
     function displayPlayer(hud, in_player)
     {
-        hud.font = '40px "Century Gothic"'; 
+        hud.font = '40px "CenturyGothic"'; 
         hud.fillStyle = 'white';
         if (two_player_mode) 
         {

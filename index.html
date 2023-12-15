@@ -3,6 +3,11 @@
 <head>
     <title>Tic-Tac-Toe 3.0</title>
     <style>
+        @font-face {
+            font-family: 'CenturyGothic';
+            src: url('font/CenturyGothic.ttf') format('truetype');
+        }
+
         body {
             background-color: black;
             margin: 0; /* Reset default margin for the body element */
@@ -30,7 +35,7 @@
             border-radius: 3px;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
-            font-family: "Century Gothic";
+            font-family: "CenturyGothic";
         }
 
         .restart-button:hover {
@@ -49,7 +54,7 @@
             border: 2px solid white;
             border-radius: 3px;
             font-size: 16px; /* Set a font size */
-            font-family: "Century Gothic";
+            font-family: "CenturyGothic";
             transition: background-color 0.3s, color 0.3s;
             cursor: pointer; /* Mouse pointer on hover */
         }
@@ -62,7 +67,7 @@
 
         .title {
             position: absolute;
-            font-family: "Century Gothic";
+            font-family: "CenturyGothic";
             font-size: 50px;
             color: white;
             top: 10px;
