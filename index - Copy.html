@@ -22,10 +22,11 @@
         }
 
         .restart-button {
-            position: relative;
-            margin-bottom: 5%;
-            /* bottom: 10%; */
-            left: 0%;
+            position: absolute;
+            /* justify-content: left;
+            align-items: first baseline; */
+            bottom: 100px;
+            left: 35%;
             z-index: 2;
             background-color: black;
             color: white;
@@ -43,11 +44,9 @@
         }
 
         .btn {
-            position: relative;
-            margin-bottom: 5%;
-            /* bottom: 10%; */
-            right: 0%;
-            z-index: 2;
+            position: absolute;
+            bottom: 100px;
+            right: 35%;
             background-color: black; /* Blue background */
             border: none; /* Remove borders */
             color: white; /* White text */
@@ -71,7 +70,7 @@
             font-family: "CenturyGothic";
             font-size: 50px;
             color: white;
-            top: 1%;
+            top: 10px;
         }
     </style>
     <script src="https://kit.fontawesome.com/44e401cb85.js" crossorigin="anonymous"></script>
@@ -97,23 +96,15 @@
         }
     </script>
 </head>    
-<body style="
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;">
+<body>
     <div class="title">Tic-Tac-Toe</div>
     <br>
-    <div style="position: relative; max-width: 512px; max-height: 512px; width: 95%; height: 95%;">
-        <canvas id="c" width="512" height="512" style = "position: absolute; z-index: 0">Please use a browser that supports HTML5 </canvas>
-        <canvas id="hud" width="512" height="512" style = "position: absolute; z-index: 1"></canvas>
-    </div>
-    <div>
-        <button id="startAgainButton" class="restart-button"> Restart game</button>
-        <button id="iconButton" class="btn">
-            <i class="fas fa-user-group" id="icon1" style="display: inline;"></i>
-            <i class="fas fa-robot" id="icon2" style="display: none;"></i>
-        </button>  
-    </div>
+    <canvas id="c" width="512" height="512" style = "position: absolute; z-index: 0">Please use a browser that supports HTML5 </canvas>
+    <canvas id="hud" width="512" height="512" style = "position: absolute; z-index: 1"></canvas>
+    <button id="startAgainButton" class="restart-button"> Restart game</button>
+    <button id="iconButton" class="btn">
+        <i class="fas fa-user-group" id="icon1" style="display: inline;"></i>
+        <i class="fas fa-robot" id="icon2" style="display: none;"></i>
+    </button>  
 </body>
 </html>
