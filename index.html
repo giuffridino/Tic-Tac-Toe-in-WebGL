@@ -22,9 +22,11 @@
         }
 
         .restart-button {
-            position: relative;
+            /* position: relative; */
             margin-bottom: 5%;
-            /* bottom: 10%; */
+            margin-right: 30%;
+            white-space: nowrap;
+            /* margin-right: 19vw; */
             left: 0%;
             z-index: 2;
             background-color: black;
@@ -43,8 +45,9 @@
         }
 
         .btn {
-            position: relative;
+            /* position: relative; */
             margin-bottom: 5%;
+            margin-right: 10%;
             /* bottom: 10%; */
             right: 0%;
             z-index: 2;
@@ -72,6 +75,11 @@
             font-size: 50px;
             color: white;
             top: 1%;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
         }
     </style>
     <script src="https://kit.fontawesome.com/44e401cb85.js" crossorigin="anonymous"></script>
@@ -108,7 +116,7 @@
         <canvas id="c" width="512" height="512" style = "position: absolute; z-index: 0">Please use a browser that supports HTML5 </canvas>
         <canvas id="hud" width="512" height="512" style = "position: absolute; z-index: 1"></canvas>
     </div>
-    <div>
+    <div class="button-container">
         <button id="startAgainButton" class="restart-button"> Restart game</button>
         <button id="iconButton" class="btn">
             <i class="fas fa-user-group" id="icon1" style="display: inline;"></i>
