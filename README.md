@@ -1,4 +1,6 @@
 # Tic-Tac-Toe-in-WebGL
+Play the web version: [Tic-Tac-Toe](https://giuffridino.github.io/Tic-Tac-Toe-in-WebGL/)
+
 Aesthetic Tic-Tac-Toe game developed in Js and WebGL. The player can play both locally with a friend or against a slightly dumb AI model implemented using MinMax algorithm
 
 # Screenshots
